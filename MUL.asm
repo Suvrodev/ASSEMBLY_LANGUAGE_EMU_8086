@@ -42,7 +42,7 @@
     
     ;---------------------
     MOV AH,0
-    AAA
+    AAM
        
     MOV BX,AX
     ADD BH,30H
