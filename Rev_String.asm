@@ -24,7 +24,7 @@ INCLUDE "EMU8086.INC"
     INC CX 
     JMP INPUT:
       
-    EXIT:
+   
     AFTER_TAKING_INPUT:
     MOV AH,2
     MOV DL,10
