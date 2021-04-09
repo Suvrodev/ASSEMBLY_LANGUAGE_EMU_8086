@@ -38,14 +38,10 @@ INCLUDE "EMU8086.INC"
     POP DX
     INT 21H
     DEC CX     ;1
-    JNE START:  ;2
-    
+    JNE START:  ;2  
    ; LOOP START: ITS THE ALTERNATIVE OF 1 AND 2 LINE
-    
-    
-    
-    
-    
+  
+    EXIT:
     MOV AH,4CH
     INT 21H
     MAIN ENDP
