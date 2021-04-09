@@ -94,11 +94,17 @@
     INT 21H 
     
     MOV AH,2
-    MOV DL,N1   ;PRINT TOTAL VALUE
-    MOV BL,N2 
-    MOV H_N,BL
-    ADD DL,H_N 
-    SUB DL,30H
+    MOV AL,N1   ;PRINT TOTAL VALUE
+    ADD AL,N2
+    MOV AH,0
+    AAA
+    MOV BX,AX
+    ADD BH,30H 
+    ADD BL,30H 
+    MOV AH,2
+    MOV DL,BH
+    INT 21H 
+    MOV DL,BL
     INT 21H 
     
      MOV AH,2    ;NEW LINE
@@ -188,4 +194,3 @@
     INT 21H
     MAIN ENDP
    END MAIN
-    
